@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+.more-false{
+    animation: more-false .75s ease-in-out forwards;
+}
+@keyframes more-false {
+    from{transform: rotate(90deg);}
+    to{transform: rotate(0deg);}
+}
+
+.more-true{
+    animation: more-true .75s ease-in-out forwards;
+}
+@keyframes more-true {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(90deg);}
+}
+
+
+.links-container-show{
+    transform-origin: top;
+
+    animation: appear .75s ease-in-out forwards;
+}
+
+@keyframes appear {
+    from{transform: scaleY(0);}
+    to{transform: scaleY(1);}
+}
+
+.slider-item{
+    min-width: 100svw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff5;
+    position: relative;
+}
+
+#slider-img{
+    filter: opacity(0.5);
+}
